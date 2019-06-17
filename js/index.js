@@ -41,9 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// let navigation = document.querySelectorAll('a');
+// navigation.forEach(item => item.style.color = 'green');
 
 let navItems = document.querySelector('nav').children;
-
 navItems[0].textContent = siteContent['nav']['nav-item-1']
 navItems[1].textContent = siteContent['nav']['nav-item-2']
 navItems[2].textContent = siteContent['nav']['nav-item-3']
@@ -51,6 +52,18 @@ navItems[3].textContent = siteContent['nav']['nav-item-4']
 navItems[4].textContent = siteContent['nav']['nav-item-5']
 navItems[5].textContent = siteContent['nav']['nav-item-6']
 
+let navParent = document.querySelector('nav');
+let navChild = document.createElement('a');
+navChild.textContent = "link1";
+let newNavChild = document.createElement('a');
+newNavChild.textContent = 'link2';
+navParent.appendChild(navChild);
+navParent.prepend(newNavChild);
+
+
+
+let navigation = document.querySelectorAll('a');
+navigation.forEach(item => item.style.color = 'green');
 
 let banner = document.querySelector('h1');
 banner.textContent = siteContent['cta']['h1'];
